@@ -1,0 +1,9 @@
+{
+	"development": {
+		"username": "vagrant",
+		"password": "random",
+		"database": "random",
+		"host": "127.0.0.1",
+		"port": 5432
+	}
+}

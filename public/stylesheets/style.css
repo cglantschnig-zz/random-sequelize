@@ -1,0 +1,22 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+footer {
+  height: 50px;
+  border-top: 1px solid #777;
+  position: fixed;
+  bottom: 0;
+  left: 50px;
+  right: 50px;
+}
+
+footer .copyright {
+  line-height: 48px;
+}
