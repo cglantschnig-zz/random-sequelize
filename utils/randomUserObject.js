@@ -1,4 +1,4 @@
-var categories = require('./categoryHelper');
+var categories = require('./categoryHelper')({});
 var randomNumber = require('./randomNumber');
 var randomArray = require('./randomArray');
 

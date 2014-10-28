@@ -52,7 +52,7 @@ module.exports = function(sequelize, DataTypes) {
 		Museum:               DataTypes.BOOLEAN,
 		Movies:               DataTypes.BOOLEAN,
 		ArtGallerie:          DataTypes.BOOLEAN,
-		BallEscors:           DataTypes.BOOLEAN,
+		BallEscorts:           DataTypes.BOOLEAN,
 		BBQ:                  DataTypes.BOOLEAN,
 		Picnic:               DataTypes.BOOLEAN,
 		WeddingEscort:        DataTypes.BOOLEAN,

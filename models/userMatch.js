@@ -10,9 +10,17 @@ module.exports = function(id, errorCb, successCb) {
 		var User = sequelize.define(tablename, {
 
 
-			senderId: Sequelize.INTEGER,
-			receiverId: Sequelize.INTEGER,
-			match: Sequelize.INTEGER // optimierbar
+			senderId: {
+				type: Sequelize.INTEGER,
+				primaryKey: true
+			},
+			receiverId: {
+				type: Sequelize.INTEGER,
+				primaryKey: true
+			},
+			match: { // optimierbar
+				type: Sequelize.INTEGER
+			}
 
 
 		});
