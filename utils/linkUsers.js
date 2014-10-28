@@ -1,8 +1,8 @@
-var userModel = require('../models/user');
+var userModel = require('../models/userMatch');
 var winston = require('winston');
 
 var error = function(error) {
-	var err = new Error('Couldnt create usermodel');
+	var err = new Error(error);
 	err.status = 500;
 }
 
