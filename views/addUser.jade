@@ -1,0 +1,15 @@
+extends layout
+block content
+    div.btn-group
+        a.btn.btn-info(href='/users/add/1') Add 1 User
+        a.btn.btn-info(href='/users/add/5') Add 5 Users
+        a.btn.btn-info(href='/users/add/10') Add 10 Users
+        a.btn.btn-info(href='/users/add/100') Add 100 Users
+        a.btn.btn-info(href='/users/add/1000') Add 1000 Users
+        a.btn.btn-info(href='/users/add/10000') Add 10000 Users
+
+
+    if addedElements
+        div.alert.alert-success added
+            span= addedElements
+            | new Users

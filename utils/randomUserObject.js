@@ -50,7 +50,7 @@ module.exports = function() {
 		}
 	}
 
-	returnedObject.Fault = (randomNumber(0,1) === 0) ? true : false;
+	returnedObject.Fault = (randomNumber(0,1) === 0);
 	returnedObject.BreakupReason = randomNumber(0,23);
 	returnedObject.LastBreakup = randomNumber(0,4);
 
