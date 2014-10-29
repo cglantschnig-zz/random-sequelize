@@ -9,7 +9,6 @@ module.exports = function(id, errorCb, successCb) {
 		//winston.info('Create User Table: ' + tablename);
 		var User = sequelize.define(tablename, {
 
-
 			senderId: {
 				type: Sequelize.INTEGER,
 				primaryKey: true
@@ -22,18 +21,28 @@ module.exports = function(id, errorCb, successCb) {
 				type: Sequelize.INTEGER
 			}
 
-
 		});
 
-		sequelize[tablename] = User;
+		var createTableQuery =  'CREATE TABLE IF NOT EXISTS "' + tablename + '" (';
+		createTableQuery += '"senderId" integer,';
+		createTableQuery += '"receiverId" integer,';
+		createTableQuery += '"match" smallint,';
+		createTableQuery += 'PRIMARY KEY("senderId", "receiverId")';
+		createTableQuery += ') TABLESPACE tbs_matches;';
 
-		User.sync().then(function(model) {
-			successCb(User, true); // return true as 2nd Parameter if the table got created
-		}).error(function(error) {
-			winston.error(error);
-			delete sequelize[tablename];
-			errorCb(error);
-		})
+		sequelize.query(createTableQuery).then(function(rows) {
+
+			sequelize[tablename] = User;
+
+			User.sync().then(function (model) {
+				successCb(User, true); // return true as 2nd Parameter if the table got created
+			}).error(function (error) {
+				winston.error(error);
+				delete sequelize[tablename];
+				errorCb(error);
+			})
+
+		});
 
 		/*
 		var sqlQuery = "SELECT EXISTS( SELECT * FROM information_schema.tables WHERE table_name = '"+ tablename +"') as state;";

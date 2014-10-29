@@ -30,7 +30,7 @@ module.exports = function(sequelize, DataTypes) {
 		RockClimbing:         DataTypes.BOOLEAN,
 		Diving:               DataTypes.BOOLEAN,
 		Hunting:              DataTypes.BOOLEAN,
-		Dancing:              DataTypes.BOOLEAN,
+		ProfessionalDancing:  DataTypes.BOOLEAN,
 		Billiard:             DataTypes.BOOLEAN,
 		Pilates:              DataTypes.BOOLEAN,
 		Yoga:                 DataTypes.BOOLEAN,

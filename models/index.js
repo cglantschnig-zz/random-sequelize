@@ -9,7 +9,8 @@ var sequelize = new Sequelize(config.database, config.username, config.password,
 	port: config.port,
 	logging: false,
 	define: {
-		freezeTableName: true
+		freezeTableName: true,
+		timestamps: false
 	}
 });
 

@@ -20,7 +20,7 @@ module.exports = function(parseObject) {
 		RockClimbing:         parseObject.RockClimbing || false,
 		Diving:               parseObject.Diving || false,
 		Hunting:              parseObject.Hunting || false,
-		Dancing:              parseObject.Dancing || false,
+		ProfessionalDancing:  parseObject.Dancing || false,
 		Billiard:             parseObject.Billiard || false,
 		Pilates:              parseObject.Pilates || false,
 		Yoga:                 parseObject.Yoga || false,
