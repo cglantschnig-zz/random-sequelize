@@ -1,4 +1,6 @@
 random-sequelize
 ================
 
-  Deprecated! Just a test project.
+```
+Deprecated! Just a test project.
+```
